@@ -4,6 +4,8 @@ import Home from '../components/Home'
 import SignUp from '../components/Auth/SignUp'
 import SignIn from '../components/Auth/SignIn'
 import UserProfileSettings from '../components/User/Settings/UserProfileSettings'
+import UserPasswordSettings from '../components/User/Settings/UserPasswordSettings'
+import SinglePost from '../components/Post/SinglePost'
 
 Vue.use(VueRouter)
 
@@ -24,9 +26,19 @@ Vue.use(VueRouter)
       component: SignIn
     },
     {
-      path: '/settigns/profile',
+      path: '/settings/profile',
       name: 'UserProfileSettings',
       component: UserProfileSettings
+    },
+    {
+      path: '/settings/password',
+      name: 'UserPasswordSettings',
+      component: UserPasswordSettings
+    },
+    {
+      path: '/:username/post/:id',
+      name: 'SinglePost',
+      component: SinglePost
     },
   ]
 
