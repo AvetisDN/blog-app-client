@@ -6,7 +6,7 @@
     <div class="eight wide column">
       <div class="ui segment">
         <h2 class="ui medium dividing header">My Timeline</h2>
-        <Posts :posts='posts' :auth-user="user" />
+        <Posts :posts.sync='posts' :auth-user="user" />
       </div>
     </div>
   </div>

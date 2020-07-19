@@ -5,6 +5,7 @@
             :key="post.id"
             :post = "post"
             :auth-user = "authUser"
+            v-on:delete="removeDeletedPost"
         />
     </div>
 </template>
@@ -33,6 +34,12 @@ export default {
     methods: {
         fetchAddedPost(post) {
             this.posts.unshift(post)
+        },
+        removeDeletedPost(postId) {
+            const filtered = this.posts.filter(post => {
+                return post.id !== postId
+            })
+            this.$emit('update:posts', filtered)
         }
     }
 }
