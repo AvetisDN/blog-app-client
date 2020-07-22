@@ -9,17 +9,22 @@
         <Posts :posts.sync='posts' :auth-user="user" />
       </div>
     </div>
+    <div class="four wide column">
+      <WhoToFollow/>
+    </div>
   </div>
 </template>
 
 <script>
 import UserSidebar from '@/components/User/UserSidebar'
+import WhoToFollow from '@/components/User/WhoToFollow'
 import Posts from '@/components/Post/Posts'
 export default {
   name: 'Home',
   components: {
     Posts,
-    UserSidebar
+    UserSidebar,
+    WhoToFollow
   },
   data() {
     return {
