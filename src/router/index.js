@@ -6,7 +6,9 @@ import SignIn from '../components/Auth/SignIn'
 import UserProfile from '../components/User/Profile/UserProfile'
 import UsersFollowing from '../components/User/Profile/UsersFollowing'
 import UsersFollowers from '../components/User/Profile/UsersFollowers'
+import FavoritePosts from '../components/User/Profile/FavoritePosts'
 import UserProfileSettings from '../components/User/Settings/UserProfileSettings'
+import UserAvatarSettings from '../components/User/Settings/UserAvatarSettings'
 import UserPasswordSettings from '../components/User/Settings/UserPasswordSettings'
 import SinglePost from '../components/Post/SinglePost'
 
@@ -34,6 +36,11 @@ Vue.use(VueRouter)
       component: UserProfileSettings
     },
     {
+      path: '/settings/avatar',
+      name: 'UserAvatarSettings',
+      component: UserAvatarSettings
+    },
+    {
       path: '/settings/password',
       name: 'UserPasswordSettings',
       component: UserPasswordSettings
@@ -59,6 +66,15 @@ Vue.use(VueRouter)
     {
       path: '/:username/followers',
       component: UsersFollowers,
+      props: true
+    },
+    {
+      path: '/favorites',
+      component: FavoritePosts
+    },
+    {
+      path: '/:username/favorites',
+      component: FavoritePosts,
       props: true
     },
     {

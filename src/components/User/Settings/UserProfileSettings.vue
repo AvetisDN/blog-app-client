@@ -162,14 +162,6 @@ export default {
                 })
         },
         updateProfile() {
-            console.log({
-                name: this.name,
-                username: this.username,
-                email: this.email,
-                location: this.location,
-                website_url: this.website_url,
-                bio: this.bio
-            });
             const token = localStorage.getItem('blogapp-token')
             window.axios.put('/profile/update', {
                 name: this.name,

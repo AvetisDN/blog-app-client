@@ -6,6 +6,9 @@
                 <router-link to="/settings/profile">Edit Profile</router-link>
             </div>
             <div class="item">
+                <router-link to="/settings/avatar">Edit Avatar</router-link>
+            </div>
+            <div class="item">
                 <router-link to="/settings/password">Edit Password</router-link>
             </div>
         </div>

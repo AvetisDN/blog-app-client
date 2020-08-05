@@ -23,7 +23,7 @@
             <router-link class="item" to="/settings/profile">
                 Settings
             </router-link>
-            <a class="item">
+            <a class="item" @click="signOut">
                 <i class="sign out icon"></i>
             </a>
         </div>
@@ -68,6 +68,10 @@ export default {
                     this.title = ''
                     this.content = ''
                 })
+        },
+        signOut() {
+            localStorage.removeItem('blogapp-token')
+            this.$router.push('/signin')
         }
     }
 }
